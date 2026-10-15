@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "proposal_id": "p0001",
+  "base_event_sequence": 0,
+  "default_mode": "explore",
+  "selected_mode": "explore",
+  "default_mode_reason": "bootstrap_archive",
+  "override": null,
+  "target_cell": "{\"algorithm_family\":\"new-family\"}",
+  "intended_descriptors": {
+    "algorithm_family": "new-family"
+  },
+  "descriptor_policy": "allow_novel",
+  "parent": {
+    "candidate_id": "c0001",
+    "code_ref": "/immutable/parent-reference"
+  },
+  "workspace_root": "/absolute/isolated/candidate-workspace",
+  "worker_proposal_path": "/absolute/isolated/candidate-workspace/proposal.json",
+  "isolation_proof": {
+    "passed": true,
+    "enforcement": "os_acl",
+    "workspace_root": "/absolute/isolated/candidate-workspace",
+    "controller_only_roots_digest": "sha256:controller-roots-digest",
+    "preflight_command_digest": "sha256:isolation-preflight-command",
+    "preflight_artifact_digest": "sha256:isolation-preflight-artifact",
+    "protected_inputs_digest": "sha256:protected-input-snapshot"
+  },
+  "context_digest": "sha256:context-content-digest",
+  "context": {},
+  "campaign_id": null,
+  "milestone_id": null,
+  "status": "open"
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Auto Evolution"
+  short_description: "Run reusable eval-driven code evolution"
+  default_prompt: "Use $auto-evolution to run a bounded quality-diversity optimization stage for this project."

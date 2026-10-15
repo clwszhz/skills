@@ -1,0 +1,47 @@
+{
+  "schema_version": 3,
+  "candidate_id": "c0001",
+  "proposal_id": "p0001",
+  "proposal_digest": "sha256:proposal-content-digest",
+  "context_digest": "sha256:context-content-digest",
+  "workspace_root": "/absolute/isolated/candidate-workspace",
+  "code_ref": "/absolute/path-or-revision",
+  "hypothesis": "State one falsifiable mechanism hypothesis.",
+  "changed_files": [],
+  "tags": [],
+  "bottlenecks": [],
+  "scope": {
+    "workspace_root": "/absolute/isolated/candidate-workspace",
+    "manifest_digest": "sha256:candidate-scope-manifest",
+    "protected_inputs_digest": "sha256:protected-input-snapshot"
+  },
+  "evaluation": {
+    "protocol": "development",
+    "protocol_id": "development-v1",
+    "valid": false,
+    "primary_score": null,
+    "samples": [],
+    "aggregation": {
+      "method": "median",
+      "value": null
+    },
+    "provenance": {
+      "dataset_id": "configured-development-dataset",
+      "dataset_digest": "sha256:dataset-content-digest",
+      "evaluator_id": "project-evaluator-v1",
+      "evaluator_digest": "sha256:evaluator-content-digest",
+      "command_digest": "sha256:normalized-command-digest",
+      "environment": {
+        "hardware": "stable-hardware-identity"
+      }
+    },
+    "hard_constraints": {},
+    "auxiliary_metrics": {},
+    "descriptors": {},
+    "failure": {
+      "category": "not_evaluated",
+      "message": "Replace this template with evaluator output."
+    },
+    "artifacts": {}
+  }
+}

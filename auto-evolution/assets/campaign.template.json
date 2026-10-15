@@ -1,0 +1,69 @@
+{
+  "schema_version": 2,
+  "campaign_id": "campaign-example",
+  "objective": "Describe the coupled architectural change.",
+  "rationale": "Explain why an isolated intermediate edit may underperform.",
+  "head_candidate_id": "c0001",
+  "target_descriptors": {
+    "algorithm_family": "new-family",
+    "execution_model": "parallel",
+    "reuse": "enabled"
+  },
+  "descriptor_policy": "exact",
+  "external_contract_digest": "sha256:fixed-external-contract",
+  "affected_modules": [
+    "src/example.cpp"
+  ],
+  "budget": {
+    "max_candidates": 4,
+    "max_evaluator_runs": 20,
+    "max_elapsed_seconds": 14400
+  },
+  "milestones": [
+    {
+      "milestone_id": "representation",
+      "objective": "Introduce the new representation behind the existing interface.",
+      "target_descriptors": {
+        "algorithm_family": "new-family",
+        "execution_model": "serial",
+        "reuse": "disabled"
+      },
+      "descriptor_policy": "allow_novel",
+      "required_hard_constraints": [
+        "build_passed",
+        "correctness_passed",
+        "scope_passed"
+      ],
+      "max_primary_regression_fraction": 0.1
+    },
+    {
+      "milestone_id": "integration",
+      "objective": "Integrate and validate the complete mechanism.",
+      "target_descriptors": {
+        "algorithm_family": "new-family",
+        "execution_model": "parallel",
+        "reuse": "enabled"
+      },
+      "descriptor_policy": "exact",
+      "required_hard_constraints": [
+        "build_passed",
+        "correctness_passed",
+        "scope_passed"
+      ],
+      "max_primary_regression_fraction": 0.0
+    }
+  ],
+  "final_gate": {
+    "required_hard_constraints": [
+      "build_passed",
+      "correctness_passed",
+      "scope_passed"
+    ],
+    "max_regression_from_start_fraction": 0.0,
+    "min_primary_score": null,
+    "require_validation": false
+  },
+  "termination": {
+    "rollback_candidate_id": "c0001"
+  }
+}

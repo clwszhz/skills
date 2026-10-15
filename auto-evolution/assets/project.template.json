@@ -1,0 +1,76 @@
+{
+  "schema_version": 3,
+  "project": {
+    "name": "project",
+    "execution_environment": "native",
+    "candidate_root": "",
+    "baseline_root": null,
+    "state_root": ".evolution/state",
+    "required_branch": null,
+    "mutable_roots": [],
+    "protected_roots": []
+  },
+  "adapter": {
+    "interface_version": 1,
+    "path": "",
+    "sha256": ""
+  },
+  "isolation": {
+    "enforcement": "os_acl",
+    "trusted_process_acknowledged": false,
+    "worker_workspace_root": "",
+    "controller_only_roots": []
+  },
+  "commands": {
+    "isolation_preflight": "",
+    "build": "",
+    "smoke": "",
+    "development": "",
+    "validation": "",
+    "holdout": "",
+    "profile": ""
+  },
+  "evaluation": {
+    "primary_metric": "primary_score",
+    "direction": "maximize",
+    "noise_band": 0.0,
+    "hard_constraints": [
+      "build_passed",
+      "correctness_passed",
+      "scope_passed"
+    ],
+    "auxiliary_metrics": [],
+    "descriptor_keys": [
+      "algorithm_family",
+      "execution_model",
+      "reuse"
+    ],
+    "descriptor_space": {},
+    "minimum_cell_quality": null,
+    "repair_metric": null,
+    "repair_direction": "maximize"
+  },
+  "datasets": {
+    "smoke": "",
+    "development": "",
+    "validation": "",
+    "holdout": ""
+  },
+  "search": {
+    "max_attempts": 60,
+    "max_valid_candidates": 30,
+    "bootstrap_valid_candidates": 4,
+    "plateau_window": 10,
+    "coverage_target": 0.6,
+    "target_cells": 8,
+    "repeated_bottleneck_threshold": 5,
+    "max_inspirations": 4,
+    "max_negative_lessons": 3,
+    "max_open_proposals": 3
+  },
+  "completion": {
+    "target_primary_score": null,
+    "require_validation": true,
+    "require_holdout_at_stage_end": true
+  }
+}
